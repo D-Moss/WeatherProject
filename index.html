@@ -1,67 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Forecast</title>
-  </head>
-  <body>
-    <div class="weather-app">
-      <header>
-        <form class="search-form" id="search-form">
-          <input
-            type="search"
-            placeholder="Enter a city.."
-            required
-            id="search-form-input"
-            class="search-form-input"
-          />
-          <input type="submit" value="Search" class="search-form-button" />
-        </form>
-      </header>
-      <main>
-        <div class="weather-app-data">
-          <div>
-            <h1 class="weather-app-city" id="city"></h1>
-            <p class="weather-app-details">
-              <span id="time"></span>,
-              <span id="description"></span>
-              <br />
-              Humidity: <strong id="humidity"></strong>, Wind:
-              <strong id="wind-speed"></strong>
-            </p>
-          </div>
-          <div class="weather-app-temperature-container">
-            <div id="icon"></div>
-            <div class="weather-app-temperature" id="temperature"></div>
-            <div class="weather-app-unit">°F</div>
-          </div>
-        </div>
-        <div class="weather-forecast" id="forecast"></div>
-      </main>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Dream Vacation</title>
+</head>
+<body>
 
-      <footer>
-        This project was coded body
-        <a href="https://codepen.io/Diona-Moss" target="_blank"> Diona </a>
-        and is
-        <a href="https://github.com/D-Moss" target="_blank"> on GitHub </a>
-        and
-        <a
-          href="https://app.netlify.com/teams/d-moss-o8d9vci/overview"
-          target="_blank"
-        >
-          hosted on Netlify
-        </a>
-      </footer>
-    </div>
-    <script src="index.js"></script>
-  </body>
+	<!--Navigation Bar Open-->
+	<div class="topnav" id="myTopNav">
+		<a href="#vegas" class="active">Home</a>
+		<a href="#attraction">Attraction</a>
+		<a href="#adventure">Adventure</a>
+		<a href="#food">Dining</a>
+		<a href="#visit">Hotel</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
+
+	<div id="vegas">
+		<button class="theme">Night</button>
+
+		<!--Welcome Message Open-->
+		<div class="welcome">
+			<h1>Welcome to Las Vegas...</h1>
+			<p>
+				Las Vegas, the glittering jewel in the desert, is a playground for the adventurous at heart. It's where the excitement of the casinos, the glamour of the shows, and the luxury of fine dining come together to create a vacation experience like no other. Every corner of this vibrant city is designed to astonish and delight, from the stunning fountains of Bellagio to the towering heights of the Stratosphere. Las Vegas promises a dream vacation where the memories will shine as brightly as the neon lights on the Strip. Whether seeking thrills or relaxation, visitors find that Las Vegas truly offers it all, wrapped in a package of endless wonder.
+			</p>
+		</div>
+	</div>
+	<!--Welcome Message Close-->
+
+	<div class="image-container">
+		<div class="container"></div>
+	</div>
+
+	<!--Attraction Open-->
+	<div id="attraction">
+		<h2 class="attractions">Time to find something to do</h2>
+		<div class="row">
+			<div class="column">
+				<h3>On the Strip Attractions</h3>
+				<p>
+					Las Vegas, the glittering jewel in the desert, is a world of vibrant energy and endless entertainment options. Imagine strolling down the Strip, where the Eiffel Tower rises majestically at Paris Las Vegas, offering a taste of French romance amidst the neon lights. Themed hotels and attractions transport you across continents; from the gondolas of the Venetian to the ancient aura of the Luxor Hotel, shaped like a giant pyramid. The Bellagio fountains dance in a mesmerizing display of water choreographed to music, while the botanical gardens inside provide a tranquil oasis of natural beauty. Thrilling rides atop the Stratosphere tower give adrenaline junkies their fix, with breathtaking views of the cityscape. Casinos, the beating heart of Las Vegas, buzz with the excitement of chance and the clinking of slot machines. For those seeking a unique experience, the wedding chapels offer a chance to say 'I do' in the most memorable way possible. And when the sun sets, the city transforms into a neon wonderland, with lights that guide you through an adventure of discovery. Indeed, Las Vegas is a dream vacation, a place where you can travel the world without ever leaving the ground, a city that promises and delivers the extraordinary.
+				</p>
+			</div>
+
+			<div class="column">
+				<h3>Off the Strip Attractions</h3>
+				<p>
+					Fremont Street, the pulsating heart of Las Vegas, offers an immersive journey through the vibrant history and culture of this iconic city. Here, the past and present merge in a symphony of neon lights, where every corner whispers tales of yesteryears while celebrating the now. It's a place where adventure beckons from above as the SlotZilla Zipline invites the brave to soar, and down below, the street comes alive with an eclectic mix of performers that captivate and charm. Amidst the vintage allure of classic casinos, the modern-day thrills of high-stakes games await, offering a slice of the old-school Vegas experience. As the night deepens, the culinary scene emerges, a smorgasbord of flavors that cater to every palate, from the refined tastes of gourmet dining to the hearty simplicity of street food. Fremont Street is not just a walk; it's an experience, a celebration of the spirit of Las Vegas, where every visit is a new chapter in its legendary story. Come and write your own, under the glow of the largest screen you've ever seen, and be swept away by the sheer magic of Fremont Street.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--Attraction Close-->
+
+	<!--Adventure Open-->
+	<h2 id="adventure" class="explore">An Adventure Awaits...</h2>
+	<div>
+		<p>
+			Venturing beyond the glittering lights of Las Vegas, the surrounding area offers a treasure trove of natural wonders and outdoor activities that promise adventure and awe-inspiring vistas. Imagine the thrill of exploring the vast expanse of the Grand Canyon, where the layers of colorful rock formations tell the story of Earth's geological history. Picture yourself navigating the rugged trails of Red Rock Canyon on an electric bike, the wind in your hair and the sun casting warm hues on the sandstone peaks. The Mojave Desert stretches out like a canvas painted with the most intricate details by nature itself, offering a serene escape where one can witness the resilience of life in arid conditions.
+
+			<br><br>
+
+			Antelope Canyon's winding corridors, carved by water and time, invite you to lose yourself in their otherworldly beauty, while the Valley of Fire State Park dazzles with its fiery red sandstone formations that seem to glow with an inner light. Horseshoe Bend, a dramatic curve of the Colorado River, presents a view so stunning it feels like standing on the edge of the world. For those seeking a more rugged experience, the roar of an ATV engine provides a rush of adrenaline as you traverse challenging terrains, kicking up clouds of dust in your wake.
+
+			<br><br>
+
+			As the day wanes, consider the romantic notion of a horseback ride at sunset, the sky painted with strokes of pink and orange, the silhouette of the mountains providing a dramatic backdrop. This is a moment of tranquility, a time to reflect on the day's adventures and the beauty of the natural world. And if the call of the ocean is too strong to resist, a day trip to California offers the soothing sounds of waves and the soft sands of its beaches, a stark contrast to the desert's rugged charm. Rodeo Drive awaits with its luxurious boutiques, a playground for those who find their thrills in the latest fashion trends.
+
+			<br><br>
+
+			This region is a mosaic of experiences, each piece a unique adventure, from the depths of canyons to the heights of mountain peaks, from the quiet of the desert to the bustle of the city. It's a reminder that adventure doesn't always lie in distant lands; sometimes, it's just outside your doorstep, waiting for you to step out and explore. Whether you're a thrill-seeker or a nature lover, the world outside Las Vegas is a landscape of endless possibilities, a place where memories are waiting to be made. So why wait? The adventure of a lifetime could begin with a single step into the vastness that lies beyond the neon lights.
+		</p>
+	</div>
+	<!--Adventure Close-->
+
+	<!--Dining Open-->
+	<div class="dining" id="food">
+		<h2>Time to Eat</h2>
+		<p>
+			Las Vegas, the shimmering oasis in the Nevada desert, is not just a haven for gamblers and show-goers but also a paradise for food lovers. The city's food tour is a culinary adventure that tantalizes the taste buds with a diverse array of gourmet experiences. From the sizzling kitchens of celebrity chefs to the cozy corners of local favorites, every stop is a chance to savor the flavors that make Las Vegas dining truly unique. Vegans rejoice, for the city's food scene is inclusive, offering plant-based delights that promise the same richness and creativity as any other dish on the menu.
+
+			<br><br>
+
+			Buffets in Las Vegas are legendary, offering a gastronomic journey around the world on a single plate. Whether it's a craving for sushi, a hankering for Italian, or a desire for down-home American, the buffets cater to every palate. For those who prefer the comfort of familiar favorites, IHOP and Denny's stand ready to serve, their menus a testament to the timeless appeal of hearty breakfasts and satisfying meals.
+
+			<br><br>
+
+			Yet, for the early risers and brunch enthusiasts, Stacks & Yolks and Babystacks present a sweet and savory symphony of pancakes. Imagine cutting into a fluffy stack of red velvet pancakes, the cream cheese frosting melting under the warm Las Vegas sun, or the playful twist of s'mores pancakes, where breakfast meets dessert in a dish that's sure to bring a smile. Fast food joints dot the landscape, providing quick, tasty options for those on the move. McDonald's, Shake Shack, Wendy's, Burger King, and Subway are beacons for those in search of a swift bite.
+
+			<br><br>
+
+			As the day turns to night, the city lights up, and so do its dining options. Gordon Ramsay Pub & Grill offers a taste of British fare with a Nevada twist, while Guy Fieri's Vegas Kitchen & Bar is a tribute to bold flavors and big portions. Wicked Spoon redefines the buffet experience with its upscale approach, and Ruth's Chris Steakhouse Las Vegas offers a steak that cuts like butter and tastes like a dream.
+
+			<br><br>
+
+			No matter where you find yourself in Las Vegas, the hotel you call home for the night is sure to have a dining option that's just right. Whether it's a quick bite before hitting the town or a leisurely meal to wind down the evening, the convenience and quality are unmatched. In Las Vegas, every meal is not just sustenance but an event, a memory in the making, and a story to be told. The city's culinary landscape is as vibrant and varied as the neon signs that light up the Strip, each restaurant a star in the glittering sky of this desert metropolis. Bon appétit, or as they say in Vegas, let the good times roll!
+		</p>
+	</div>
+	<!--Dining Close-->
+
+	<!--Hotel Open-->
+	<div class="hotel" id="visit">
+		<h1>Hotels</h1>
+		<h2>Ready to start your vacation?</h2>
+		<p>Reserve your room at one of these great hotels</p>
+	</div>
+
+	<div class="hotel-row">
+		
+		<div class="hotel-column" onclick="openTab('b1');">
+			<img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/466/original/Luxor.jpg?1720996113" alt="Luxor" style="width:100%">
+		</div>
+
+		<div class="hotel-column" onclick="openTab('b2');">
+			<img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/465/original/GoldenNugget.jpg?1720996089" alt="Golden Nugget" style="width:100%">
+		</div>
+
+		<div class="hotel-column" onclick="openTab('b3');">
+			<img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/469/original/Venetian.jpg?1720996166" alt="Venetian" style="width:100%">
+		</div>
+
+		<div class="hotel-column" onclick="openTab('b4');">
+			<img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/654/original/apache.jpg?1721100840" alt="Hotel Apache" style="width:100%">
+		</div>
+
+		<div class="hotel-column" onclick="openTab('b5');">
+			<img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/636/original/Tower.jpg?1721082395" alt="STRAT" style="width:100%">
+		</div>
+	</div>
+
+	<div id="b1" class="containerTab" style="background: green">
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<h3>Luxor</h3>
+		<ul>
+			<li>Indulge in a variety of cuisines at the buffet, a feast for all taste buds.</li>
+			<li>Dive into relaxation with a refreshing swim in the crystal-clear pool.</li>
+			<li>Sip on signature cocktails or your favorite classics at the lively bar.</li>
+			<li>Experience the thrill of the game and the chance to win big at the casino.</li>
+			<li>Unwind and rejuvenate with luxurious treatments at the spa.</li>
+		</ul>
+		<p>
+			<button class="hotel-button">
+				<a href="https://luxor.mgmresorts.com/en.html" target="_blank">Reserve Room</a>
+			</button>
+		</p>
+	</div>
+
+	<div id="b2" class="containerTab other" style="background: goldenrod;">
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<h3>Golden Nugget</h3>
+		<ul>
+			<li>Marvel at the 200,000-gallon shark tank aquarium, a feature that sets this hotel apart.</li>
+			<li>Enjoy a refreshing drink at one of the six bars.</li>
+			<li>Shop to your heart's content at the hotel's exclusive retail shops.</li>
+			<li>Unwind at thea spa, then work out at the state-of-the-art fitness center.</li>
+			<li>Indulge in a variety of culinary delights at any of the 9 on-site restaurants.</li>
+		</ul>
+		<p>
+			<button class="hotel-button">
+				<a href="https://www.goldennugget.com/las-vegas/" target="_blank">Reserve Room</a>
+			</button>
+		</p>
+	</div>
+
+	<div id="b3" class="containerTab" style="background: red">
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<h3>The Venetian</h3>
+		<ul>
+			<li>Experience the thrill of our state-of-the-art casino, where luck and excitement meet.</li>
+			<li>Embark on a romantic journey with a Gondola ride, gliding through serene waters.</li>
+			<li>Dive into the bliss of our sparkling pool, an oasis in the heart of excitement.</li>
+			<li>Shop till you drop in our diverse collection of stores.</li>
+			<li>Chill out at our unique bar, where the temperature is as cool as the beverages.</li>
+		</ul>
+		<p>
+			<button class="hotel-button">
+				<a href="https://www.venetianlasvegas.com/" target="_blank">Reserve Room</a>
+			</button>
+		</p>
+	</div>
+
+	<div id="b4" class="containerTab other" style="background: purple">
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<h3>Hotel Apache</h3>
+		<ul>
+			<li>Discover the allure of the unknown with a stay at a haunted hotel, where history whispers in the halls.</li>
+			<li>Indulge in diverse culinary delights with a selection of three unique restaurants.</li>
+			<li>Unwind in one of the four bars or lounges, perfect for socializing or enjoying a quiet drink.</li>
+			<li>Experience a night like no other in rooms that echo with tales of yesteryear.</li>
+		</ul>
+		<p>
+			<button class="hotel-button">
+				<a href="https://www.binions.com/hotel/" target="_blank">Reserve Room</a>
+			</button>
+		</p>
+	</div>
+
+	<div id="b5" class="containerTab" style="background: blue">
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<h3>The STRAT</h3>
+		<ul>
+			<li>Golf, pools, and various dining options are available.</li>
+			<li>The observation tower stands at 1,149 feet, providing you breathtaking views.</li>
+			<li>Big Shot, X-Scream, and SkyJump are exhilarating for the thrill-seekers.</li>
+			<li>A unique dining room that revolves 360 degrees, offering breathtaking panoramic views as you dine.</li>
+			<li>A proud recipient of the 2021 Travelers' Choice Award.</li>
+		</ul>
+		<p>
+			<button class="hotel-button">
+				<a href="https://thestrat.com/" target="_blank">Reserve Room</a>
+			</button>
+		</p>
+	</div>
+	<!--Hotel Close-->
+
+	<!--Footer Open-->
+	<footer>
+		<p>
+			This project was coded by
+			<a href="https://codepen.io/Diona-Moss" target="_blank">Diona</a>
+			and is
+			<a href="https://github.com/D-Moss" target="_blank"> on Github</a>
+			and
+			<a href="https://app.netlify.com/teams/d-moss-o8d9vci/sites" target="_blank"> hosted on Netlify</a>
+		</p>
+	</footer>
+	<script src="index.js"></script>
+</body>
 </html>
