@@ -272,3 +272,21 @@ footer a {
 		text-align: left;
 	}
 }
+
+@media screen and (min-width: 650px) {
+	.image-container {
+		height: 950px;
+	}
+	.dark .image-container {
+		height: 595px;
+	}
+}
+
+@media screen and (min-width: 750px) {
+	.image-container {
+		height: 950px;
+	}
+	.dark .image-container {
+		height: 1050px;
+	}
+}
